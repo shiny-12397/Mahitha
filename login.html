@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRKR Engineering College Attendance</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #d3d3d3; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            flex-direction: column;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            position: fixed; /* Fix the navbar at the top */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Make sure the navbar stays on top */
+        }
+
+        /* Adjust body content to avoid overlap with navbar */
+        .content {
+            margin-top: 60px; /* Create space for the fixed navbar */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: calc(100vh - 60px); /* Remaining height after navbar */
+        }
+
+        /* Attendance Webpage Title (below navbar) */
+        .login-header {
+            font-size: 1.5rem; /* Font size for the title */
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px; /* Small margin between title and login box */
+        }
+
+        /* Login Box Styles */
+        .login-container {
+            background-color: #d9f7ff; /* Light blue background for the login box */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-box button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        SRKR ENGINEERING COLLEGE
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Attendance Webpage Title (below navbar) -->
+        <div class="login-header">
+            ATTENDANCE WEBPAGE
+        </div>
+
+        <!-- Login Box -->
+        <div class="login-container">
+            <div class="login-box" id="loginBox">
+                <h2>Login</h2>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Validate Credentials
+            if (username === "B.Mahitha" && password === "abc@123") {
+                // Redirect to the attendance page if credentials are correct
+                window.location.href = "attendance.html";
+            } else {
+                alert("Invalid username or password");
+            }
+        }
+    </script>
+</body>
+</html>
